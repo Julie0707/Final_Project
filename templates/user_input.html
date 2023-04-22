@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight into Top 250 Movies</title>
+    <style>
+        form{
+            padding-left: 18px;
+            border: 3px pink dashed;
+        }
+    </style>
+</head>
+<body>
+    <form action="/handle_form" method="POST">
+        <h1>Welcome to the INSIGHT into Top 250 Movies!</h1>
+        <h3>Now let's fill in the form to get your interested information!</h3>
+        <p>
+            What's your user name? <input name="name" type="text"/><br/><br/>
+        </p>
+        <p>
+            What criteria do you prefer to use for classifying movies?<br/>
+            <input type="radio" name="criteria" value="genre">Genre<br/>
+            <input type="radio" name="criteria" value="rating">Rating<br/>
+            <input type="radio" name="criteria" value="director">Director<br/>
+        </p>
+        <p>
+            Which rating source are you interested in?<br/>
+            <input type="radio" name="source" value="imdb_rating"> IMDB <br/>
+            <input type="radio" name="source" value="rotten_tomatoes_rating"> Rotten Tomatoes <br/>
+            <input type="radio" name="source" value="metacritic_rating"> Metacritic <br/>    
+        </p>
+        <p>
+            <strong>And we can show the shortest link of any two people (director or actor) or movie!</strong><br/>
+            Are you interested in this part? <br/>
+            <input type="radio" name="question" value="yes">Yes
+            <input type="radio" name="question" value="no">No<br/><br/>
+            Try to choose your interested movie's title or director or actor's name. <em> Please capitalize the first letter of each word.</em><br/>
+            Start point: <input name="name_one" type="text"/><br/>
+            Target point: <input name="name_two" type="text"/><br/><br/>
+
+        </p>
+        <input type="submit" value="Submit Form"/><br/><br/>
+    </form>
+</body>
+</html>
+
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight into Top 250 Movies</title>
+    <style>
+        table, th, td {
+            border: 1.5px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .path{
+            display: inline
+        }
+        *{
+            margin: 15px;
+        }
+        #path{
+            border: 3px burlywood dashed;
+            padding: 9px;
+        }
+        .name{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: underline;
+            color: forestgreen;
+        }
+        .t1{
+            border: 1.5px solid burlywood;
+            border-collapse: collapse;
+            padding: 7px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>INSIGHT into Top 250 Movies</h1>
+    <h3>Hello, {{name}}! Here are the personalized results based on your choice.</h3>
+    <h3>Here is the information of top 250 movies classified by<span class="name">Rating</span>,</h3>
+    <h3>based on the<span class="name">{{source}}</span>you have chosen.</h3>
+    {% if criteria == "rating" %}
+    <table>
+        <tr>
+            <th class="name">Rating</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Actors</th>
+            <th>Genre</th>
+            <th>Country</th>
+         
+        </tr>
+        {% for i in table_result2 %}
+        <tr>
+            <td>{{i[source]}}</td>
+            <td>{{i["title"]}}</td>
+            <td>{{i["year"]}}</td>
+            <td>{{i["director"]}}</td>
+            <td>{{i["actors"]}}</td>
+            <td>{{i["genre"]}}</td>
+            <td>{{i["country"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+</html>
